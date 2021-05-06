@@ -1,0 +1,38 @@
+<div class="tv-layout">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="span12">
+        <div class="nav-row">
+          <a routerLink="/">
+            <div class="round-box back-arrow">
+              <img src="assets/images/icons/arrow-back.png" />
+            </div>
+          </a>
+        </div>
+        <div class="tv-data-row">
+          <h1>Search Results</h1>
+
+          <div class="col-12">
+            <div class="results">
+              <div class="search-results">
+                <div class="item" *ngFor="let movie of movies">
+                  <img
+                    src="{{
+                      'https://image.tmdb.org/t/p/original/' + movie.poster_path
+                    }}"
+                    onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/480px-No_image_available.svg.png'"
+                    alt="..."
+                  />
+
+                  <p class="movie-name">
+                    {{ movie.title.slice(0, 20) + "..." }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
