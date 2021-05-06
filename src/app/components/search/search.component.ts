@@ -51,6 +51,7 @@ export class SearchComponent implements OnInit {
     }
     if (LetterVal === 'CLEAR') {
       this.searchString = '';
+      return;
     }
     if (LetterVal === 'SEARCH') {
       this.submitSearch();
